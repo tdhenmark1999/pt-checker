@@ -1,0 +1,20 @@
+<div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between">
+    <a href="#" class="navbar-brand oswald-400" style="margin-left: 50px;">PT checker V3.0
+    </a>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item" style="margin-right: 10px;">
+        <a routerLink="checkers" class="nav-link oswald-400 mr-5">Welcome, {{ fullName }}!</a>
+      </li>
+      <li class="nav-item" style="margin-right: 40px;background-color: white;border-radius: 5px;">
+        <a href="{{ loginUrl }}" style="color: #333;" class="nav-link oswald-400 mr-5">Logout</a>
+      </li>
+
+    </div>
+
+  </nav>
+
+  <div class="mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

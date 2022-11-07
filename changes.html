@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Compare D:\PJLI\PTChecker\Pass 3\PTChecker with D:\PJLI\pt-checker-front-end</title>
+	<style type="text/css">
+	<!--
+		body {
+			font-family: sans-serif;
+			font-size: smaller;
+		}
+		table {
+			border-collapse: collapse;
+			border: 1px solid gray;
+		}
+		th,td {
+			padding: 3px;
+			text-align: left;
+			vertical-align: middle;
+			border: 1px solid gray;
+		}
+		th {
+			color: white;
+			background: blue;
+			padding: 4px 4px;
+			background: linear-gradient(mediumblue, darkblue);
+		}
+		.icon2 { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEMSURBVDhPlZA/a8JAGIfz1RQcFBwsdFBwKH6E4lDcpHSQ4FCCQxEHIR2EdBAcOwl2KNhB0EGwQ4cMHW5wuMHh5/teXv+il/OFh5DLPU8u8WwzGgLHyLLbRB+A1sQaUArge0Ye2ycaJCI2AoXMmlxlm33CdzmBUHs4RbbZJ+yTTCfZfYbh/4YAT7d3EJk4BipV5RbovulEJIlFwx8FynF6IOhoxPLGncisfjmwsgeCV5IviIYlcHc/Tz+B39YHSURmvqBAaeL2D/wWRY5Ew4wDn24BnucXvReZ6Q9QKI7cAo2mOhEN3xTIR+mBxpPC9ExkJl8cCO2BxzrJF0TDGMjmAnsgm/FxlVxCstPztk2giMKL5rlfAAAAAElFTkSuQmCC'); background-repeat: no-repeat; background-size: 16px 16px; }
+		.icon9 { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEmSURBVDhPY6AeaGD4D2WhskEAnxwYgARhEthoXHIoAJ8ifHJwgE8RPjk4wKcInxwcYNMAA/jkYGDuAqf/QfNV/ztPF/nvMlnxP0MyDoXYQNMGo/8xa9j+By1l/e+7gOm/7WS2/yY9rP9XnpkJMQSfi+bMd4RrBmH3uWxgA779/PJfp4nzv0mjOKohIBrZgIBJvHCbQdhrDv//n7+//3/y/sF/pWrm/7IlbKgGgAAy230SD1jD9hsL/kcvVwezn354ALYdpFmvSgS/AfEzjP7/+fsHrBFEgzQbd3CCbRctYPxf32FGwIDJ/v/zVvuANb//9va/XjM73OnKmZL/hfMYUf0MAuh8ozqp/7Fznf+7TdQFawRhkEawZmJBdH8gXBN/BrGaGRgA8KLg0U9t6kEAAAAASUVORK5CYII='); background-repeat: no-repeat; background-size: 16px 16px; }
+		.icon26 { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAINSURBVDhPjZDfS1NhHMYP/gMJXiQTURmBOiNnU7acomc62aEgxS6KEsSbri0QFK8cCCVejS7G0KimEC26GUWxC3/sjNaO0oSViiuUGNbFFBURXU/v+553nr2joC98eOHlfT7P9xyJTug18D+wx3+b0EuIcwocH3MOgGyWCMgbCo+IE5wzgudhEsyHs7+A/Bt68pgxgRk9qF2xQrPUImKu1qkoR/hiORMMDYrwqD4BP28tWDnfnKFkCDtAmvINuHOvSOB7ogejtLWqGmHS/KqsFC8u6ARKJIZPkpDeJILbWVEwNS1+L2vmrcWkvlBBpkjwCNiYnGRoAwNIeb3w0UbOY9JMmSCk1oC+W2lRsOv3Y1tuxc+bCo6iy1jv6UTc0QR6T1cuRBekDMHH+z344W7HnuLCaSKB37kcDmMxfG5txuLVBtY6xnlAWFklgl5VFOy6O7CvdOEsmWSCI01D8poNS1YLVsfvslYaZHwClBsRQxBxWbDtciLT1Y6TeJwJDlQVK3YrFhrr8V6xoY8051FjVBA2BItDMr46W7BOVv5+3c0Ea7ITalMDPlguIfGw32gnqEtE4AkaguDwMKLWOiRsl7E1NsLW3xodwbvaGoRqTHgz2sxChcjdAUNA56nHg7dmM/vrObIBPedNJozb7WxlhiDwiQK504tnZJP5tjbMVlbiucMBevdvprhAkv4AuaBa7w9OG3UAAAAASUVORK5CYII='); background-repeat: no-repeat; background-size: 16px 16px; }
+		.icon27 { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIWSURBVDhPjY9fSFNhGIe/s+E5DIpdaITBLvpnN7VgSXfFnJU1EvWEF2oi4UWFYIH9gQZKGmU1Jm2VRZuO4DSsjAiiq64CuyjWRWCBsISKXUScoNicW/x6v++bnZ1h0AsPZxfneX47jN/zZ8D/IF5e7WafwH5FIJ8v85MwAf4Op6zYz3hgidWySTLHeAhks/JZ1qwz7kvRfc8t0CY1sAkGdoUYYTC/Af3H7JRVefGpqtWVZRI5fDn7WZL5BHT3VgVu3payFqPl67Q6RoSIIWKAOE70STILPGBWBaIV3/uPVQHJ8x8o0JW1B8LXgEQyAH16K5on67AvthGsnxY53YROBCXz7wG9M2MPjD71oWvGCT2l4eCUir23VDSGa2yrApJlIG0F4tNNOPpYRWfKgXZDQ0tCxZ6YilzhF2be3pXrFf8g/Y4CHXNWoD26FrpRg9akA8GkhmDcjUIxjy/mIraPutB4cb1Y5WL6jSTY+tIKtETXYKmYw4uPSfSktonfX38sYudlFzaFnPCcUcG8tN4gmXtNgUOzVqDvjg/LxSUhLpcKQt417kLDMMnnnPBeqBOrXBS84gGjIhBrw+Cjwyj9LsHMfYd3TMOWkALPWQfWnVYwMr77r7hCYH/cCvDzDW9Ab6IZB27sgOe8gvohBbWDCjafrLeJViBsD0QiEfRMdAip9pQC9wkFR662we/3I9B0aVWkydgfc9E9S8jQzqoAAAAASUVORK5CYII='); background-repeat: no-repeat; background-size: 16px 16px; }
+		.indent0 { padding-left: 20px; background-position: 2px center; }
+	-->
+	</style>
+</head>
+<body>
+<h2>Compare D:\PJLI\PTChecker\Pass 3\PTChecker with D:\PJLI\pt-checker-front-end</h2>
+<p>13/04/2022 5:32:53 pm</p>
+<table border="1">
+<tr>
+<th>Filename</th><th>Folder</th><th>Comparison result</th><th>Left Date</th><th>Right Date</th><th>Extension</th></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">.editorconfig</td><td></td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>editorconfig</td></tr>
+<tr style='background-color: #dddddd'><td class="icon2 indent0"><a href="changes.files/.gitignore.html">.gitignore</a></td><td></td><td>Right only: D:\PJLI\pt-checker-front-end</td><td>  </td><td>* 25/02/2022 12:03:46 am</td><td>gitignore</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">.gitkeep</td><td>src\assets</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>gitkeep</td></tr>
+<tr style='background-color: #ffffff'><td class="icon9 indent0">401.png</td><td>src\assets\img</td><td>Binary files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>png</td></tr>
+<tr style='background-color: #ffffff'><td class="icon9 indent0">500.jpg</td><td>src\assets\img</td><td>Binary files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>jpg</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">angular.json</td><td></td><td>Text files are identical</td><td>  01/04/2022 1:36:22 pm</td><td>  01/04/2022 1:36:22 pm</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">app-routing.module.ts</td><td>src\app</td><td>Text files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">app.component.css</td><td>src\app</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>css</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">app.component.html</td><td>src\app</td><td>Text files are identical</td><td>  29/03/2022 4:52:54 pm</td><td>  29/03/2022 4:52:54 pm</td><td>html</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">app.component.spec.ts</td><td>src\app</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ts</td></tr>
+<tr style='background-color: #f0de7d'><td class="icon26 indent0"><a href="changes.files/src_app_app.component.ts.html">app.component.ts</a></td><td>src\app</td><td>Text files are different</td><td>  29/03/2022 4:52:30 pm</td><td>* 12/04/2022 10:07:51 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">app.module.ts</td><td>src\app</td><td>Text files are identical</td><td>  01/04/2022 1:30:29 pm</td><td>  01/04/2022 1:30:29 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">auth.guard.ts</td><td>src\app\services</td><td>Text files are identical</td><td>  01/04/2022 1:31:55 pm</td><td>  01/04/2022 1:31:55 pm</td><td>ts</td></tr>
+<tr style='background-color: #f0de7d'><td class="icon26 indent0"><a href="changes.files/src_app_services_auth.service.ts.html">auth.service.ts</a></td><td>src\app\services</td><td>Text files are different</td><td>  01/04/2022 2:03:09 pm</td><td>* 11/04/2022 6:11:45 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">browserslist</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td></td></tr>
+<tr style='background-color: #dddddd'><td class="icon2 indent0"><a href="changes.files/changes.html.html">changes.html</a></td><td></td><td>Right only: D:\PJLI\pt-checker-front-end</td><td>  </td><td>* 05/04/2022 10:49:38 am</td><td>html</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checker-details.component.html</td><td>src\app\components\checker-details</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>html</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checker.model.spec.ts</td><td>src\app\models</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checker.model.ts</td><td>src\app\models</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checker.service.spec.ts</td><td>src\app\services</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checker.service.ts</td><td>src\app\services</td><td>Text files are identical</td><td>  01/04/2022 2:12:07 pm</td><td>  01/04/2022 2:12:07 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checkers-list.component.css</td><td>src\app\components\checkers-list</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>css</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checkers-list.component.html</td><td>src\app\components\checkers-list</td><td>Text files are identical</td><td>  15/03/2022 11:23:02 am</td><td>  15/03/2022 11:23:02 am</td><td>html</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checkers-list.component.spec.ts</td><td>src\app\components\checkers-list</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">checkers-list.component.ts</td><td>src\app\components\checkers-list</td><td>Text files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">config.js</td><td>src</td><td>Text files are identical</td><td>  01/04/2022 2:02:31 pm</td><td>  01/04/2022 2:02:31 pm</td><td>js</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">env.service.provider.ts</td><td>src\app\services</td><td>Text files are identical</td><td>  01/04/2022 1:29:40 pm</td><td>  01/04/2022 1:29:40 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">env.service.spec.ts</td><td>src\app\services</td><td>Text files are identical</td><td>  01/04/2022 1:26:58 pm</td><td>  01/04/2022 1:26:58 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">env.service.ts</td><td>src\app\services</td><td>Text files are identical</td><td>  01/04/2022 1:30:48 pm</td><td>  01/04/2022 1:30:48 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">environment.prod.ts</td><td>src\environments</td><td>Text files are identical</td><td>  01/04/2022 1:29:40 pm</td><td>  01/04/2022 1:29:40 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">environment.ts</td><td>src\environments</td><td>Text files are identical</td><td>  29/03/2022 4:50:28 pm</td><td>  29/03/2022 4:50:28 pm</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon9 indent0">favicon.ico</td><td>src</td><td>Binary files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ico</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">index.html</td><td>src</td><td>Text files are identical</td><td>  01/04/2022 1:40:44 pm</td><td>  01/04/2022 1:40:44 pm</td><td>html</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">karma.conf.js</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>js</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">main.ts</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon9 indent0">nodata-found.png</td><td>src\assets\img</td><td>Binary files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>png</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">package-lock.json</td><td></td><td>Text files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">package.json</td><td></td><td>Text files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">polyfills.ts</td><td>src</td><td>Text files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>ts</td></tr>
+<tr style='background-color: #dddddd'><td class="icon2 indent0"><a href="changes.files/PTChecker3x0.WinMerge.html">PTChecker3x0.WinMerge</a></td><td></td><td>Right only: D:\PJLI\pt-checker-front-end</td><td>  </td><td>* 04/04/2022 12:10:16 pm</td><td>WinMerge</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">README.md</td><td></td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>md</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">styles.css</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>css</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">test.ts</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">tsconfig.app.json</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">tsconfig.json</td><td></td><td>Text files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">tsconfig.spec.json</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">tslint.json</td><td>src</td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">tslint.json</td><td></td><td>Text files are identical</td><td>  25/02/2022 12:03:46 am</td><td>  25/02/2022 12:03:46 am</td><td>json</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">userInfo.model.ts</td><td>src\app\models</td><td>Text files are identical</td><td>  15/03/2022 11:04:17 am</td><td>  15/03/2022 11:04:17 am</td><td>ts</td></tr>
+<tr style='background-color: #ffffff'><td class="icon27 indent0">web.config</td><td>src</td><td>Text files are identical</td><td>  30/03/2022 11:40:41 am</td><td>  30/03/2022 11:40:41 am</td><td>config</td></tr>
+</table>
+</body>
+</html>

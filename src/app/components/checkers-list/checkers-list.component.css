@@ -1,0 +1,14 @@
+.list {
+  text-align: left;
+  max-width: 750px;
+  margin: auto;
+}
+.th-modify {
+  padding: 15px;white-space: nowrap;
+}
+.td-modify {
+  padding: 15px;border: 1px solid #dee2e6;
+}
+.thead-bg {
+  background: linear-gradient(135deg,#0143a3,#0273d4); color:white;
+}

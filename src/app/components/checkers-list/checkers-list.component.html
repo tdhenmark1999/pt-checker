@@ -1,0 +1,165 @@
+<div class="list row" style="max-width: 75%;">
+  <div class="col-md-12 mt-4">
+    <div class="input-group mb-3">
+
+      <input
+        type="text"
+        class="form-control roboto-400"
+        placeholder="Search Pawnticket Number" maxlength="20" required
+        [(ngModel)]="id"
+      />
+
+      <div class="input-group-append">
+        <button *ngIf="btnSubmit"
+          class="btn btn-outline-secondary oswald-400 text-decoration" style="margin-left: 10px;"
+          type="button"
+          (click)="searchPostId()"
+        >
+          SEARCH
+        </button>
+        <button *ngIf="btnLoading" class="btn btn-primary" type="button"  class="btn btn-outline-secondary oswald-400 text-decoration" style="margin-left: 10px;" disabled>
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Loading...
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 d-flex justify-content-center" *ngIf="statusCode == 401">
+    <img src="assets/img/401.png"/>
+
+  </div>
+  <div class="col-md-12 d-flex justify-content-center" *ngIf="statusCode == 404">
+    <img src="assets/img/nodata-found.png"/>
+
+  </div>
+  <div class="col-md-12 d-flex justify-content-center" *ngIf="statusCode == 500 || statusCode == 0">
+    <img src="assets/img/500.jpg"/>
+  </div>
+
+  <div class="col-md-12" *ngIf="statusCode == 200">
+
+    <div >
+      <div >
+        <div class="d-flex justify-content-between">
+        <h4 class="oswald-400 text-uppercase mt-3 ">Information of the Data</h4>
+        <h4 class="oswald-400 text-uppercase mt-3 "><span class="text-danger oswald-700">{{checkers.pawnTicketInfo.ticketStatus || '--'}}</span> | {{checkers.pawnTicketInfo.ticketNumber || '--'}}</h4>
+        </div>
+        <hr>
+        <!-- <div class="mb-3">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Region :</strong></label> <br>
+          <span class="roboto-400">{{ currentChecker.title  == null ? currentChecker.name : currentChecker.title }}
+          </span>
+          </div> -->
+          <div class="row mt-3">
+          <div class="mb-3 col-4">
+            <label><strong class="oswald-700 text-uppercase text-size--sm">Region :</strong></label> <br>
+            <span class="roboto-400">{{checkers.pawnTicketInfo.regionCode || '--'}}
+            </span>
+            </div>
+        <div class="mb-3 col-4">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Area :</strong></label><br>
+          <span class="roboto-400">{{checkers.pawnTicketInfo.areaCode || '--'}}
+        </span>
+        </div>
+        <div class="mb-3 col-4">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Branch :</strong></label><br>
+          <span class="roboto-400">{{checkers.pawnTicketInfo.branchCode || '--'}}
+        </span>
+        </div>
+        <div class="mb-3 col-4">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Branch Name :</strong></label><br>
+          <span class="roboto-400">{{checkers.pawnTicketInfo.branchName || '--'}}
+        </span>
+        </div>
+        <div class="mb-3 col-4">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Client No. :</strong></label><br>
+          <span class="roboto-400">{{checkers.pawnTicketInfo.clientNo || '--'}}
+        </span>
+        </div>
+        <div class="mb-3 col-4">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Client Name :</strong></label><br>
+          <span class="roboto-400">{{checkers.pawnTicketInfo.clientName || '--'}}
+        </span>
+        </div>
+        <div class="mb-3 col-4">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Storage Group :</strong></label><br>
+          <span class="roboto-400">{{checkers.pawnTicketInfo.storageGroup || '--'}}
+        </span>
+        </div>
+        <div class="mb-3 col-4">
+          <label><strong class="oswald-700 text-uppercase text-size--sm">Appraisal Value :</strong></label><br>
+          <span class="roboto-400">₱ {{checkers.pawnTicketInfo.appraisalValue}}
+        </span>
+        </div>
+      </div>
+        <hr>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="col-md-12" *ngIf="statusCode == 200">
+    <h4 class="oswald-700 mb-3 mt-3 text-uppercase">Pawn History</h4>
+    <div class="table-responsive">
+    <table class="table mt-3" style="border-radius: 10px;">
+      <thead class="thead-bg">
+        <th class="oswald-400 text-uppercase th-modify">Loan Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Principal Amount</th>
+        <th class="oswald-400 text-uppercase th-modify">Advance Interest</th>
+        <th class="oswald-400 text-uppercase th-modify">Net Amount</th>
+        <th class="oswald-400 text-uppercase th-modify">Maturity Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Month 1 Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Month 2 Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Expiry Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Redeemed Date</th>
+        <th class="oswald-400 text-uppercase th-modify">Promo Reason </th>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let checker of checkers.pawnTicketInfo.ticketHistories">
+          <td class="roboto-300 td-modify">{{ checker.loanDate | date}}</td>
+          <td class="roboto-300 td-modify">₱ {{ checker.principalAmount }}</td>
+          <td class="roboto-300 td-modify">₱ {{ checker.advanceInterest}}</td>
+          <td class="roboto-300 td-modify">₱ {{ checker.netAmount}}</td>
+          <td class="roboto-300 td-modify">{{ checker.maturityDate | date }}</td>
+          <td class="roboto-300 td-modify">{{ checker.monthOneDate | date }}</td>
+          <td class="roboto-300 td-modify">{{ checker.monthTwoDate | date }}</td>
+          <td class="roboto-300 td-modify">{{ checker.expiryDate | date }}</td>
+          <td class="roboto-300 td-modify">{{ checker.redeemedDate | date }}</td>
+          <td class="roboto-300 td-modify">{{ checker.promoReason || '--'}}</td>
+        </tr>
+        <tr>
+          <td class="roboto-300 td-modify" colspan="10"></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="table-responsive">
+      <table class="table mt-3" style="border-radius: 10px;">
+        <thead class="thead-bg">
+          <th class="oswald-400 text-uppercase th-modify">Storage Code</th>
+          <th class="oswald-400 text-uppercase th-modify">Description</th>
+          <th class="oswald-400 text-uppercase th-modify">Weight</th>
+          <th class="oswald-400 text-uppercase th-modify">Karat</th>
+          <th class="oswald-400 text-uppercase th-modify">Item Appraisal Value</th>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let checker of checkers.pawnTicketInfo.ticketItems">
+            <td class="roboto-300 td-modify">{{ checker.storageCode || '--'}}</td>
+            <td class="roboto-300 td-modify">{{ checker.description || '--'}}</td>
+            <td class="roboto-300 td-modify">{{ checker.weight || '--'}}</td>
+            <td class="roboto-300 td-modify">{{ checker.karat || '--'}}</td>
+            <td class="roboto-300 td-modify">₱ {{ checker.itemAppraisalValue}}</td>
+
+          </tr>
+          <tr>
+            <td class="roboto-300 td-modify" colspan="5"></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,103 @@
+<div >
+  <div >
+    <div class="d-flex justify-content-between">
+    <h4 class="oswald-400 text-uppercase mt-3 ">Information of the Data</h4>
+    <h4 class="oswald-400 text-uppercase mt-3 "><span class="text-danger oswald-700">NEW</span> | 91133SGIIII30</h4>
+    </div>
+    <hr>
+    <!-- <div class="mb-3">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Region :</strong></label> <br>
+      <span class="roboto-400">{{ currentChecker.title  == null ? currentChecker.name : currentChecker.title }} 
+      </span>
+      </div> -->
+      <div class="row mt-3">
+      <div class="mb-3 col-4">
+        <label><strong class="oswald-700 text-uppercase text-size--sm">Region :</strong></label> <br>
+        <span class="roboto-400">Lorem Ipsum Dummy Text 
+        </span>
+        </div>
+    <div class="mb-3 col-4">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Area :</strong></label><br>
+      <span class="roboto-400">Lorem Ipsum Dummy Text 
+    </span>
+    </div>
+    <div class="mb-3 col-4">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Branch :</strong></label><br>
+      <span class="roboto-400">Lorem Ipsum Dummy Text 
+    </span>
+    </div>
+    <div class="mb-3 col-4">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Branch Name :</strong></label><br>
+      <span class="roboto-400">Lorem Ipsum Dummy Text 
+    </span>
+    </div>
+    <div class="mb-3 col-4">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Client No. :</strong></label><br>
+      <span class="roboto-400">Lorem Ipsum Dummy Text 
+    </span>
+    </div>
+    <div class="mb-3 col-4">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Client Name :</strong></label><br>
+      <span class="roboto-400">Lorem Ipsum Dummy Text 
+    </span>
+    </div>
+    <div class="mb-3 col-4">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Storage Group :</strong></label><br>
+      <span class="roboto-400">Lorem Ipsum Dummy Text 
+    </span>
+    </div>
+    <div class="mb-3 col-4">
+      <label><strong class="oswald-700 text-uppercase text-size--sm">Appraisal Value :</strong></label><br>
+      <span class="roboto-400">Lorem Ipsum Dummy Text 
+    </span>
+    </div>
+  </div>
+    <hr>
+  </div>
+
+  <div *ngIf="!currentChecker">
+    <br />
+    <p class="roboto-400">Please click on a Checker...</p>
+  </div>
+</div>
+
+<ng-template #editable>
+  <div *ngIf="currentChecker.id" class="edit-form">
+    <h4 class="text-uppercase mb-4 mt-4 oswald-700">Update Data</h4>
+    <form>
+      <div class="form-group mb-2">
+        <label class="oswald-700 text-uppercase text-size--sm mb-1" for="title">Title</label>
+        <input 
+          type="text"
+          class="form-control roboto-400"
+          id="title"
+          [(ngModel)]="currentChecker.title"
+          name="title"
+        />
+      </div>
+      <div class="form-group mb-2">
+        <label class="oswald-700 text-uppercase text-size--sm mb-1" for="description">Description</label>
+        <input
+          type="text"
+          class="form-control roboto-400"
+          id="description"
+          [(ngModel)]="currentChecker.body"
+          name="description"
+        />
+      </div>
+
+      <div class="form-group">
+        <label><strong  class="oswald-700 text-uppercase text-size--sm mb-1">Status:</strong></label>
+       <span class="roboto-400"> {{ currentChecker.published ? "Published" : "Pending" }}</span>
+      </div>
+    </form>
+
+    <p class="mt-3 oswald-400">{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentChecker.id">
+    <br />
+    <p>Cannot access this Data...</p>
+  </div>
+
+</ng-template>
